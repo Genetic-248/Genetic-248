@@ -3,11 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Master Cheat Sheet</title>
-
+<title>Master Cheat Sheet - Complete Edition</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <style>
 *{
   margin:0;
@@ -169,6 +166,7 @@ body{
   text-decoration:none;
   padding:8px 8px;
   border-radius:7px;
+  font-size:14px;
 }
 
 .topic-list a:hover{
@@ -232,7 +230,7 @@ body{
   left:0;
   right:0;
   display:none;
-  max-height:360px;
+  max-height:400px;
   overflow-y:auto;
   background:#101827;
   border:1px solid var(--border);
@@ -258,8 +256,19 @@ body{
 
 .search-item p{
   color:var(--muted);
-  font-size:14px;
+  font-size:13px;
   margin:0;
+}
+
+.search-item-badge{
+  display:inline-block;
+  background:var(--amber);
+  color:#06111d;
+  padding:2px 8px;
+  border-radius:4px;
+  font-size:11px;
+  font-weight:700;
+  margin-left:8px;
 }
 
 .level-section{
@@ -280,18 +289,6 @@ body{
   height:12px;
   border-radius:50%;
   background:var(--blue);
-}
-
-.level-section[data-level="basic"] .level-title::before{
-  background:var(--green);
-}
-
-.level-section[data-level="intermediate"] .level-title::before{
-  background:var(--amber);
-}
-
-.level-section[data-level="advanced"] .level-title::before{
-  background:var(--rose);
 }
 
 .content-section{
@@ -350,173 +347,6 @@ body{
   margin-bottom:7px;
 }
 
-.extensions-box{
-  margin-top:16px;
-  padding:15px;
-  border:1px solid rgba(125,211,252,.28);
-  border-radius:9px;
-  background:#061521;
-}
-
-.extensions-box h4{
-  margin-bottom:8px;
-  color:#7dd3fc;
-  font-size:16px;
-}
-
-.extensions-box p{
-  color:#dbeafe;
-  margin-bottom:10px;
-}
-
-.extensions-box table{
-  margin-top:10px;
-}
-
-.extensions-box td:first-child{
-  color:#fde68a;
-  font-family:Consolas,Monaco,monospace;
-  white-space:nowrap;
-}
-
-.real-world-box{
-  margin-top:16px;
-  padding:15px;
-  border-left:4px solid var(--green);
-  border-radius:8px;
-  background:#0b1f1a;
-}
-
-.real-world-box h4{
-  margin-bottom:8px;
-  color:var(--green);
-  font-size:16px;
-}
-
-.real-world-box p{
-  color:#d1fae5;
-}
-
-.real-world-box ol{
-  margin-top:10px;
-  padding-left:22px;
-  color:#d1fae5;
-  line-height:1.7;
-}
-
-.real-world-box li{
-  margin-bottom:7px;
-}
-
-.real-world-box code{
-  background:#06130f;
-  border:1px solid rgba(52,211,153,.25);
-  border-radius:5px;
-  padding:2px 5px;
-  color:#86efac;
-}
-
-.example-levels{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
-  margin-top:14px;
-}
-
-.example-level{
-  border:1px solid rgba(52,211,153,.25);
-  border-radius:9px;
-  padding:13px;
-  background:#071713;
-}
-
-.example-level h5,
-.breakdown-box h5{
-  margin-bottom:8px;
-  color:#86efac;
-  font-size:15px;
-}
-
-.example-level p{
-  margin-bottom:8px;
-}
-
-.example-command{
-  display:block;
-  margin:8px 0;
-  padding:8px;
-  border-radius:7px;
-  background:#030b08;
-  color:#7dd3fc;
-  overflow-x:auto;
-}
-
-.breakdown-box{
-  margin-top:14px;
-  padding:13px;
-  border:1px solid rgba(125,211,252,.25);
-  border-radius:9px;
-  background:#07131f;
-}
-
-.breakdown-row{
-  margin-top:10px;
-  padding-top:10px;
-  border-top:1px solid rgba(125,211,252,.16);
-}
-
-.breakdown-row:first-of-type{
-  border-top:0;
-  padding-top:0;
-}
-
-.breakdown-row strong{
-  display:block;
-  margin-bottom:6px;
-  color:#7dd3fc;
-}
-
-.sample-program-box{
-  margin-top:16px;
-  padding:15px;
-  border:1px solid rgba(251,191,36,.28);
-  border-radius:9px;
-  background:#1f1606;
-}
-
-.sample-program-box h4{
-  margin-bottom:8px;
-  color:var(--amber);
-  font-size:16px;
-}
-
-.sample-program-box p{
-  color:#fef3c7;
-  line-height:1.65;
-}
-
-.sample-program-box pre{
-  margin-top:12px;
-  background:#080500;
-  color:#fde68a;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:16px;
-}
-
-th,td{
-  padding:10px;
-  border-bottom:1px solid var(--border);
-  text-align:left;
-}
-
-th{
-  color:var(--blue);
-}
-
 .code-box{
   margin-top:15px;
   overflow:hidden;
@@ -551,6 +381,24 @@ pre{
   padding:15px;
   overflow:auto;
   color:#7dd3fc;
+  font-size:13px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:16px;
+}
+
+th,td{
+  padding:10px;
+  border-bottom:1px solid var(--border);
+  text-align:left;
+}
+
+th{
+  color:var(--blue);
+  background:rgba(56,189,248,.08);
 }
 
 .topic-nav{
@@ -579,230 +427,6 @@ pre{
 .topic-nav button:disabled{
   opacity:.45;
   cursor:not-allowed;
-}
-
-.cmd-tabs{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  padding:20px 30px 0;
-}
-
-.cmd-tab-button{
-  border:none;
-  background:#0d1d35;
-  color:#cbd5e1;
-  border-radius:999px;
-  padding:12px 18px;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.cmd-tab-button.active{
-  background:#38bdf8;
-  color:#06111d;
-}
-
-.cmd-details-list{
-  padding:0 30px 30px;
-}
-
-.command-summary{
-  margin-top:0;
-  color:#dbeafe;
-  font-size:15px;
-  line-height:1.8;
-}
-
-.command-usecases{
-  margin-top:18px;
-  padding:18px 20px;
-  border:1px solid rgba(56,189,248,0.18);
-  border-radius:12px;
-  background:#071a2a;
-}
-
-.command-usecases h5,
-.command-related h5{
-  margin-bottom:12px;
-  color:#38bdf8;
-  font-size:15px;
-}
-
-.command-usecases ul{
-  padding-left:20px;
-  color:#dbeafe;
-  line-height:1.7;
-}
-
-.command-usecases li{
-  margin-bottom:10px;
-}
-
-.example-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:16px;
-}
-
-.example-table th,
-.example-table td{
-  padding:10px 12px;
-  border:1px solid rgba(56,189,248,0.14);
-  text-align:left;
-}
-
-.example-table th{
-  background:rgba(56,189,248,0.08);
-  color:#7dd3fc;
-}
-
-.example-table td code{
-  display:block;
-  background:rgba(15,23,42,0.9);
-  padding:2px 4px;
-  border-radius:4px;
-  color:#a5f3fc;
-}
-
-.command-related{
-  margin-top:18px;
-  padding:18px 20px;
-  border:1px solid rgba(125,211,252,0.22);
-  border-radius:12px;
-  background:#071a2a;
-}
-
-.command-related p,
-.command-related li{
-  color:#dbeafe;
-  line-height:1.7;
-}
-
-.command-related ul{
-  padding-left:20px;
-  margin:12px 0 0;
-}
-
-.command-related li{
-  margin-bottom:8px;
-}
-
-.subtopic-groups{
-  display:grid;
-  gap:20px;
-  margin:16px 30px 0;
-}
-
-.subtopic-card{
-  border:1px solid rgba(56,189,248,0.18);
-  border-radius:16px;
-  background:#0c1a2c;
-  overflow:hidden;
-}
-
-.subtopic-card-header{
-  padding:18px 22px;
-  background:linear-gradient(180deg,rgba(3,25,52,0.96),rgba(6,41,74,0.92));
-  border-bottom:1px solid rgba(56,189,248,0.12);
-}
-
-.subtopic-card-header h4{
-  margin:0 0 6px;
-  color:#38bdf8;
-  font-size:18px;
-}
-
-.subtopic-card-header p{
-  margin:0;
-  color:#cbd5e1;
-  line-height:1.6;
-}
-
-.subtopic-card-body{
-  padding:18px 22px 22px;
-  display:grid;
-  gap:14px;
-}
-
-.cmd-details{
-  display:none;
-}
-
-.cmd-details.active{
-  display:block;
-}
-
-.card{
-  border:1px solid rgba(56,189,248,0.18);
-  border-radius:14px;
-  margin:16px 30px 0;
-  background:#071a2a;
-  overflow:hidden;
-  transition:box-shadow .2s ease, transform .2s ease;
-}
-
-.card:hover{
-  box-shadow:0 16px 35px rgba(0,0,0,0.18);
-  transform:translateY(-1px);
-}
-
-.card-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  padding:18px 22px;
-  background:linear-gradient(180deg,rgba(3,25,52,0.96),rgba(5,37,76,0.86));
-  color:#e2e8f0;
-  cursor:pointer;
-  font-weight:800;
-}
-
-.card-header .arrow{
-  font-size:14px;
-  color:#38bdf8;
-}
-
-.card-content{
-  max-height:0;
-  overflow:hidden;
-  padding:0 22px;
-  transition:max-height .28s ease, padding .28s ease;
-}
-
-.card.expanded .card-content{
-  max-height:1000px;
-  padding:18px 22px 22px;
-}
-
-.card-content p,
-.card-content h4,
-.card-content table,
-.card-content pre{
-  margin:0 0 14px;
-}
-
-.card-content table{
-  width:100%;
-  border-collapse:collapse;
-  background:rgba(15,23,42,0.85);
-}
-
-.card-content table th,
-.card-content table td{
-  padding:10px 12px;
-  border:1px solid rgba(56,189,248,0.12);
-  text-align:left;
-  font-size:14px;
-}
-
-.card-content pre{
-  background:rgba(15,23,42,0.95);
-  border-radius:10px;
-  padding:14px;
-  overflow:auto;
-  color:#7dd3fc;
 }
 
 .empty-state{
@@ -854,15 +478,12 @@ footer{
 
 <body>
 <div class="topbar">
-  <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar" title="Toggle sidebar">
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar">
     <i class="fa-solid fa-bars"></i>
   </button>
-
-  <div class="logo">CodeVerse</div>
-
+  <div class="logo">CodeVerse Master</div>
   <div class="language-scroll" id="languageTabs">
-    <button class="lang-btn active" data-tab="linux">Linux</button>
-    <button class="lang-btn" data-tab="shell">Shell</button>
+    <button class="lang-btn active" data-tab="linux">Linux Master</button>
     <button class="lang-btn" data-tab="java">Java</button>
     <button class="lang-btn" data-tab="python">Python</button>
     <button class="lang-btn" data-tab="sql">SQL</button>
@@ -877,1120 +498,321 @@ footer{
 
   <main class="main">
     <section class="hero">
-      <h1 id="heroTitle">Ultimate Linux Documentation Portal</h1>
-      <p id="heroText">
-        A complete interactive command reference for Linux administration and shell workflows.
-      </p>
-
+      <h1 id="heroTitle">Ultimate Linux Master Documentation</h1>
+      <p id="heroText">Complete Linux kernel architecture, system calls, boot flow, and enterprise administration.</p>
       <div class="search-area">
-        <input type="text" class="search-box" id="searchBox" placeholder="Search Linux topics...">
+        <input type="text" class="search-box" id="searchBox" placeholder="Search across all topics...">
         <div class="search-results" id="searchResults"></div>
       </div>
     </section>
 
     <div id="content"></div>
     <p class="empty-state" id="emptyState">No matching topics found.</p>
-
     <footer>CodeVerse | Advanced Documentation Platform</footer>
   </main>
 </div>
 
 <script>
-function slugify(value){
-  return String(value)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-function commandUseCases(command, rest, purpose){
-  const key = command.toLowerCase();
-  const useCases = {
-    pwd: [
-      "Confirm your current working directory.",
-      "Use before running file or directory commands to avoid mistakes."
-    ],
-    ls: [
-      "List files and directories in the current folder.",
-      "Combine with options like -l or -a to inspect file details."
-    ],
-    cd: [
-      "Move between directories in the shell.",
-      "Use it to navigate into a target folder before running commands."
-    ],
-    clear: [
-      "Clear the terminal screen for a fresh workspace.",
-      "Use it when output gets noisy and you want to focus on the next command."
-    ],
-    history: [
-      "Review recently executed commands.",
-      "Use it to repeat or audit a previous shell action."
-    ],
-    whoami: [
-      "Verify the current user identity.",
-      "Use when you need to confirm permissions before executing a task."
-    ],
-    id: [
-      "Inspect numeric user and group IDs.",
-      "Use it when writing scripts that depend on specific permissions."
-    ],
-    hostname: [
-      "Check the machine hostname.",
-      "Use it for network or remote configuration tasks."
-    ],
-    uname: [
-      "Display kernel and system information.",
-      "Use it when debugging compatibility or environment issues."
-    ],
-    man: [
-      "Open the manual page for a command.",
-      "Use it to learn options and usage syntax before running a command."
-    ],
-    chmod: [
-      "Change file or directory permissions.",
-      "Use it when a file needs to be readable, writable, or executable."
-    ],
-    chown: [
-      "Change file ownership.",
-      "Use it to transfer ownership to a new user or group."
-    ],
-    chgrp: [
-      "Change the group ownership of a file.",
-      "Use it when group-based access control needs adjustment."
-    ],
-    umask: [
-      "Set default file creation permissions.",
-      "Use it to control how new files are created from the shell."
-    ],
-    getfacl: [
-      "Display access control lists for files.",
-      "Use it to inspect complex permissions beyond standard mode bits."
-    ],
-    setfacl: [
-      "Modify file ACL entries.",
-      "Use it to give specific users or groups fine-grained access."
-    ],
-    sudo: [
-
-      "Run a command with elevated privileges.",
-      "Use it when a task requires root-level access."
-    ],
-    su: [
-      "Switch user accounts in the terminal.",
-      "Use it to run commands as another user or root."
-    ],
-    ps: [
-      "List running processes.",
-      "Use it to identify processes for monitoring or termination."
-    ],
-    top: [
-      "Monitor active processes and resource usage in real time.",
-      "Use it to spot high CPU or memory consumers."
-    ],
-    kill: [
-      "Terminate a process by PID.",
-      "Use it to stop a misbehaving or hung process."
-    ],
-    pgrep: [
-      "Find process IDs by name.",
-      "Use it before killing or inspecting specific services."
-    ],
-    pkill: [
-      "Send signals to processes by name.",
-      "Use it to terminate groups of related processes."
-    ],
-    find: [
-      "Search for files and directories.",
-      "Use it to locate files by name, size, time, or content."
-    ],
-    grep: [
-      "Search text content inside files.",
-      "Use it to quickly filter logs and configuration files."
-    ],
-    awk: [
-      "Process and transform text-based data.",
-      "Use it for field-based extraction and reporting."
-    ],
-    sed: [
-      "Stream-edit text using patterns.",
-      "Use it for quick file edits without opening an editor."
-    ],
-    tar: [
-      "Create or extract archive files.",
-      "Use it to package backups or move large directories."
-    ],
-    rsync: [
-      "Sync files between local and remote destinations.",
-      "Use it for fast incremental backups and deployment."
-    ],
-    ssh: [
-      "Open a secure shell session to a remote host.",
-      "Use it to administer remote machines or transfer files."
-    ],
-    curl: [
-      "Fetch data from URLs.",
-      "Use it to test web endpoints and download files."
-    ],
-    wget: [
-      "Download files from the web.",
-      "Use it when you need a simple command-line downloader."
-    ]
-  };
-
-  return useCases[key] || [
-    `Use ${command}${rest ? ` ${rest}` : ""} to ${purpose}.`,
-    "Refer to the command manual or help flag for additional options.",
-    "Combine it with pipes and redirection to build practical shell workflows."
-  ];
-}
-
-function commandCombinations(command){
-  const key = command.toLowerCase();
-  const combos = {
-    mount: [
-      "mount /dev/sdb1 /mnt/usb",
-      "mount -o rw,nodev /dev/sdb1 /mnt/data",
-      "mount -t ext4 UUID=xxxx-xxxx /mnt/storage",
-      "mount --bind /src /dst"
-    ],
-    umount: [
-      "umount /mnt/usb",
-      "umount -l /mnt/usb",
-      "umount -f /mnt/usb",
-      "umount /dev/sdb1"
-    ],
-    df: [
-      "df -h",
-      "df -Th",
-      "df --total /dev/sda1",
-      "df -h /home"
-    ],
-    du: [
-      "du -sh /var/log",
-      "du -h --max-depth=1 /usr",
-      "du -c /tmp/* | sort -h",
-      "du -ah /etc | grep '^ *[0-9.]*[MG]'"
-    ],
-    find: [
-      "find / -name '*.conf'",
-      "find /var/log -type f -mtime -7",
-      "find /tmp -type f -exec rm -f {} \\;",
-      "find . -maxdepth 2 -name '*.sh'"
-    ],
-    locate: [
-      "locate passwd",
-      "locate '*.log' | grep /var",
-      "locate --basename sshd_config",
-      "locate --ignore-case cron"
-    ],
-    updatedb: [
-      "sudo updatedb",
-      "sudo updatedb --prunepaths='/tmp /var/tmp'",
-      "sudo updatedb --localpaths='/home /etc'",
-      "sudo updatedb --userdb"
-    ],
-    ln: [
-      "ln -s /usr/bin/python3 /usr/local/bin/python",
-      "ln file.txt link.txt",
-      "ln -sf /mnt/storage/config.ini config.ini",
-      "ln -t /usr/local/bin /opt/tools/tool"
-    ]
-  };
-
-  return combos[key] || [];
-}
-
-function parseCommandItems(topicId, code, purpose, title){
-  const lines = String(code)
-    .split("\n")
-    .map(line => line.trim())
-    .filter(Boolean);
-
-  if(!lines.length){
-    return [];
-  }
-
-  if(lines[0].startsWith("#!")){
-    return [{
-      id: `${topicId}-script`,
-      name: "Shell script",
-      title: "Shell script",
-      summary: `Shell script example for ${title}`,
-      description: `A complete shell script that automates ${purpose}. Use it as a template for repeatable Linux tasks.`,
-      code,
-      useCases: [
-        `Automate the ${purpose} process with a single script.`,
-        "Reuse it as a daily task or scheduled job.",
-        "Adjust variables to match your environment and targets."
-      ],
-      details: `Review the script from top to bottom: variables are defined first, then the directory is created, files are copied, and a status message is printed.`
-    }];
-  }
-
-  return lines.map((line, index) => {
-    const parts = line.split(/\s+/);
-    const command = parts[0];
-    const rest = parts.slice(1).join(" ");
-
-    return {
-      id: `${topicId}-${slugify(command)}-${index + 1}`,
-      name: command,
-      title: command,
-      summary: rest ? `${command} ${rest}` : `${command}`,
-      description: rest
-        ? `${command} ${rest} — use it to ${purpose}.`
-        : `${command} — use it to ${purpose}.`,
-      code: line,
-      useCases: commandUseCases(command, rest, purpose),
-      combinations: commandCombinations(command),
-      details: `This command is part of the ${title} group and helps you ${purpose}.`
-    };
-  });
-}
-
-function linuxTopics(items){
-  return items.map(([number, title, purpose, code]) => {
-    const subject = title.split(" - ")[0].split(":")[0];
-    const id = `linux-${slugify(subject)}`;
-    const commands = parseCommandItems(id, code, purpose, title);
-
-    return {
-      number,
-      id,
-      title,
-      body: `${subject} is used to ${purpose}. This subtopic focuses only on ${title}.`,
-      subject,
-      purpose,
-      code,
-      commands,
-      subtopics: commands.length ? [{
-        title,
-        description: `Commands and examples for ${title}.`,
-        commands
-      }] : []
-    };
-  });
-}
+// ============================================================================
+// COMPLETE LINUX DOCUMENTATION WITH ALL SYSTEMS
+// ============================================================================
 
 const docs = {
   linux: {
-  label: "Linux",
-  description: "Complete Linux system administration, DevOps, networking, security, and automation reference.",
-  levels: [
-    {
-      key: "basics-system",
-      title: "Linux Basics & System Navigation",
-      topics: linuxTopics([
-        ["1", "System Navigation Commands", "navigate and explore Linux filesystem",
-          `pwd\nls\ncd\ntree\nstat\nfile\nclear\nhistory\nwhich\nwhereis\nwhoami\nhostname\nuname\ndate\ncal`
-        ],
-        ["2", "File System Structure", "understand Linux directory hierarchy",
-          `mount\numount\ndf\ndu\nfind\nlocate\nupdatedb\nln`
-        ]
-      ])
-    },
-
-    {
-      key: "file-operations",
-      title: "File & Directory Management",
-      topics: linuxTopics([
-        ["1", "File Operations", "create, move, copy, delete files and directories",
-          `touch\ncp\nmv\nrm\nmkdir\nrmdir\ncat\nless\nmore\nhead\ntail\nnano\nvi\nvim\necho\ntee\nsplit\npaste\npr`
-        ],
-        ["2", "Real-world Backup Automation", "automate file backup process",
-`#!/bin/bash
-SRC="/project"
-DEST="/backup"
-
-mkdir -p "$DEST"
-rsync -av --delete "$SRC/" "$DEST/"
-tar -czf "$DEST/project_backup_$(date +%F).tar.gz" -C "$SRC" .
-echo "Backup completed"`
-        ]
-      ])
-    },
-
-    {
-      key: "permissions-security",
-      title: "Permissions, Ownership & Security",
-      topics: linuxTopics([
-        ["1", "Permission System", "control file access, ownership, and security",
-          `chmod\nchown\nchgrp\numask\nsudo\npasswd\ngetfacl\nsetfacl\ngroups\nid\nsu\nvisudo`
-        ],
-        ["2", "Security Automation Script", "automate security checks and protections",
-`#!/bin/bash
-iptables -L
-ufw status verbose
-fail2ban-client status
-ssh -T localhost
-scp /tmp/testfile user@remote:/tmp/
-chmod 600 /etc/ssh/sshd_config
-chown root:root /etc/ssh/sshd_config
-auditctl -w /etc/passwd -p wa
-last -n 5
-lastlog -t 7
-echo "Security check complete"`
-        ]
-      ])
-    },
-
-    {
-      key: "process-system",
-      title: "Process & System Management",
-      topics: linuxTopics([
-        ["1", "Process Control", "monitor, manage, and prioritize processes",
-          `ps\ntop\nhtop\nkill\npkill\nkillall\nnice\nrenice\njobs\nfg\nbg\nnohup\ndisown\nscreen\ntmux\nuptime\nfree\nvmstat\niostat\nsar\nwatch\nlsof\npidof`
-        ],
-        ["2", "CPU Killer Automation", "detect and stop runaway CPU processes",
-`#!/bin/bash
-ps -eo pid,pcpu,comm --sort=-pcpu --no-headers | head -n 10 | while read pid cpu comm; do
-  if (( $(echo "$cpu > 75" | bc -l) )); then
-    echo "Stopping $comm ($pid) using $cpu% CPU"
-    kill -9 "$pid"
-  fi
-done`
-        ]
-      ])
-    },
-
-    {
-      key: "networking",
-      title: "Networking & Communication",
-      topics: linuxTopics([
-        ["1", "Networking Tools", "test, diagnose, and manage network connectivity",
-          `ping\ncurl\nwget\nscp\nrsync\nftp\nsftp\nssh\nnetstat\nss\nip\nifconfig\ntraceroute\nnslookup\ndig\nhost\nroute\nhostname\ntcpdump\nnmap\nnc`
-        ],
-        ["2", "File Sync Automation", "automate remote file synchronization",
-`#!/bin/bash
-rsync -avz ./project user@server:/backup/project
-ssh user@server "mkdir -p /backup/project"
-tar -czf project_$(date +%F).tar.gz ./project
-scp project_$(date +%F).tar.gz user@server:/backup/
-echo "Sync completed"`
-        ]
-      ])
-    },
-
-    {
-      key: "storage-disk",
-      title: "Disk & Storage Management",
-      topics: linuxTopics([
-        ["1", "Disk Usage Tools", "monitor, inspect, and manage storage devices",
-          `df\ndu\nlsblk\nblkid\nfdisk\nparted\nmount\numount\nmkfs\nfsck\niostat\nsmartctl`
-        ],
-        ["2", "Disk Cleanup Automation", "remove stale files and reclaim storage",
-`#!/bin/bash
-find /var/log -type f -name "*.log" -mtime +30 -print0 | xargs -0 rm -f
-tmpwatch --mtime 30 /tmp
-journalctl --vacuum-time=7d
-echo "Disk cleanup finished"`
-        ]
-      ])
-    },
-
-    {
-      key: "text-processing",
-      title: "Text Processing & Data Handling",
-      topics: linuxTopics([
-        ["1", "Text Utilities", "search, filter, and transform text data",
-          `grep\negrep\nfgrep\nawk\nsed\ncut\nsort\nuniq\ndiff\ncmp\nwc\ntr\ntee\nxargs\nhead\ntail\npaste\nsplit\ncolumn\njoin\ncomm\nstrings`
-        ],
-        ["2", "Log Analyzer Script", "parse and summarize logs for analysis",
-`#!/bin/bash
-journalctl -u nginx --since "1 hour ago" | grep -i "error" | awk '{print $3,$6}' | sort | uniq -c | sort -nr > error_summary.txt
-echo "Log analysis complete"`
-        ]
-      ])
-    },
-
-    {
-      key: "compression",
-      title: "Compression & Archiving",
-      topics: linuxTopics([
-        ["1", "Compression Tools", "archive files and reduce storage footprint",
-          `tar\ngzip\ngunzip\nbzip2\nbunzip2\nxz\nunxz\nzip\nunzip\n7z`
-        ],
-        ["2", "Auto Backup Compression", "compress backups and rotate them automatically",
-`#!/bin/bash
-tar -czf backup_$(date +%F).tar.gz /project
-gzip -kf backup_$(date +%F).tar.gz
-zip -r backup_$(date +%F).zip /project
-find /project -type f -mtime +7 -delete
-rsync -av /project user@server:/backup/
-echo "Backup compression done"`
-        ]
-      ])
-    },
-
-    {
-      key: "services-daemons",
-      title: "Services & Daemons",
-      topics: linuxTopics([
-        ["1", "Service Management", "control and inspect Linux services and daemons",
-          `systemctl\nservice\njournalctl\nchkconfig\ninit\nps\ntop`
-        ],
-        ["2", "Service Health Check", "verify service status and network access",
-`#!/bin/bash
-systemctl is-active nginx
-journalctl -u nginx --since "1 hour ago" | tail -n 20
-ss -tuln
-curl -I http://localhost
-ping -c 2 8.8.8.8
-grep -i "failed" /var/log/nginx/error.log`
-        ]
-      ])
-    },
-
-    {
-      key: "scheduling",
-      title: "Job Scheduling & Automation",
-      topics: linuxTopics([
-        ["1", "Scheduling Tools", "run recurring and one-time scheduled jobs",
-          `cron\ncrontab\nat\nbatch\nsystemd`
-        ],
-        ["2", "Daily Backup Scheduler", "schedule daily backup jobs with cron",
-`#!/bin/bash
-0 2 * * * tar -czf /backup/daily_$(date +\\%F).tar.gz /project
-find /project -type f -mtime +30 -delete
-rsync -av /project user@server:/backup/project`
-        ]
-      ])
-    },
-
-    {
-      key: "users-groups",
-      title: "Users & Groups",
-      topics: linuxTopics([
-        ["1", "User Management", "create, modify, and audit Linux user accounts",
-          `useradd\nadduser\nusermod\nuserdel\ngroupadd\ngroupmod\ngroupdel\npasswd\nid\ngroups\nwho\nw\nlast\nlastlog\nsu\nsudo`
-        ],
-        ["2", "User Audit Script", "collect user and login audit information",
-`#!/bin/bash
-last -n 20 > last_logins.txt
-lastlog -t 30 > recent_logins.txt
-who > current_users.txt
-w > w_summary.txt
-id $(whoami) > current_user_id.txt
-groups $(whoami) > current_groups.txt
-grep -E "sudo|wheel" /etc/group | awk -F: '{print $1}' > admin_groups.txt
-journalctl -p 3 --since "1 day ago" > errors.log`
-        ]
-      ])
-    }
-  ]
-  
-},
-  shell: {
-  label: "Shell",
-  description: "A focused shell scripting reference with Bash automation, reusable scripts, and real-world examples.",
-  levels: [
-    {
-      key: "shell-basics",
-      title: "Shell Scripting Basics",
-      topics: linuxTopics([
-        ["1", "Bash Fundamentals", "understand shell syntax, variables, and quoting",
-`#!/bin/bash
-# Backup a config file before editing
-SRC="/etc/nginx/nginx.conf"
-DEST="/etc/nginx/nginx.conf.bak"
-
-if [[ -f "$SRC" ]]; then
-  cp "$SRC" "$DEST"
-  echo "Backup created at $DEST"
-fi`
-        ],
-        ["2", "Shell I/O and Control Flow", "use input, loops, and decisions in scripts",
-`#!/bin/bash
-# Rotate logs older than 7 days
-LOG_DIR="/var/log/myapp"
-
-find "$LOG_DIR" -type f -name "*.log" -mtime +7 -print -delete
-echo "Old logs rotated from $LOG_DIR"`
-        ]
-      ])
-    },
-    {
-      key: "shell-automation",
-      title: "Automation & Reusable Scripts",
-      topics: linuxTopics([
-        ["1", "Functions and Arguments", "build reusable shell functions and accept parameters",
-`#!/bin/bash
-# Deploy an app to a target server
-deploy() {
-  local src="$1"
-  local target="$2"
-  rsync -av "$src/" "$target/"
-  ssh user@server "systemctl restart myapp"
-}
-
-deploy "/app" "/deploy/dir"
-echo "Deployment complete"`
-        ],
-        ["2", "Error Handling and Scheduling", "add safety checks and run scripts on a schedule",
-`#!/bin/bash
-set -euo pipefail
-
-TARGET="/backup"
-mkdir -p "$TARGET"
-tar -czf "$TARGET/system_$(date +%F).tar.gz" /etc /var/www
-echo "Backup created"
-# Real-world example: schedule this script in cron for daily system backups`
-        ]
-      ])
-    }
-  ]
-},
-  java: {
-    label: "Java",
-    description: "A complete interactive documentation reference for core Java syntax, OOP, and runtime behavior.",
+    label: "Linux Master",
+    description: "Complete Linux kernel internals, system architecture, administration, networking, and storage systems",
     levels: [
       {
-        key: "basic",
-        title: "Basic Java Topics",
+        key: "core-1",
+        title: "1.1 CORE ARCHITECTURE (Kernel + User Space)",
         topics: [
           {
-            id: "java-variables",
-            title: "Variables",
-            body: "Variables store values that can be used and changed while a Java program runs.",
-            code: "int age = 25;\nString name = \"John\";"
+            id: "linux-core-arch-1",
+            number: 1,
+            title: "Linux System Architecture - Kernel Space",
+            body: "The Linux kernel is the core of the operating system that manages hardware and provides services to user applications.",
+            code: `Kernel Space (Ring 0):
+├─ CPU Scheduling
+│  ├─ CFS (Completely Fair Scheduler)
+│  ├─ Real-time scheduler
+│  └─ Load balancing across cores
+├─ Memory Management
+│  ├─ Virtual memory (MMU)
+│  ├─ Paging and swapping
+│  └─ Memory allocators
+├─ Device Drivers
+│  ├─ NIC drivers
+│  ├─ Storage drivers
+│  └─ Peripheral drivers
+├─ Filesystems (VFS)
+│  ├─ ext4, xfs, btrfs
+│  └─ Virtual filesystems (/proc, /sys)
+├─ Networking Stack
+│  ├─ TCP/UDP implementation
+│  ├─ IP routing
+│  └─ Netfilter/firewall
+└─ IPC Mechanisms
+   ├─ Signals
+   ├─ Pipes & FIFOs
+   └─ Shared memory`,
+            table: [
+              ["Component", "Responsibility", "Example"],
+              ["Scheduler", "Allocate CPU time", "process scheduling, context switching"],
+              ["Memory", "Manage RAM and swap", "paging, TLB, OOM killer"],
+              ["Device Drivers", "Hardware interface", "NIC, SATA, USB drivers"],
+              ["VFS", "Unified filesystem", "ext4, xfs, NFS support"],
+              ["Netfilter", "Packet filtering", "iptables, firewall rules"],
+              ["IPC", "Process communication", "pipes, signals, sockets"]
+            ]
           },
           {
-            id: "java-datatypes",
-            title: "Data Types",
-            body: "Java supports primitive data types such as int, double, boolean, and char, plus reference types such as String, arrays, and classes.",
-            table: [["Type", "Example"], ["int", "100"], ["double", "19.99"], ["boolean", "true"], ["String", "\"Java\""]]
-          },
-          {
-            id: "java-operators",
-            title: "Operators",
-            body: "Operators perform arithmetic, comparison, assignment, and logical operations.",
-            code: "int total = 10 + 5;\nboolean allowed = total >= 15 && total < 30;"
-          },
-          {
-            id: "java-conditions",
-            title: "Conditions",
-            body: "Conditional statements run different code blocks based on true or false expressions.",
-            code: "if (age >= 18) {\n  System.out.println(\"Adult\");\n} else {\n  System.out.println(\"Minor\");\n}"
+            id: "linux-core-arch-2",
+            number: 2,
+            title: "Linux System Architecture - User Space",
+            body: "User space contains applications, libraries, and system utilities that run with restricted privileges.",
+            code: `User Space (Ring 3):
+├─ Shell (bash, sh, zsh)
+│  ├─ Command interpreter
+│  ├─ Script execution
+│  └─ Job control
+├─ System Utilities
+│  ├─ ls, cp, mv, rm
+│  ├─ grep, awk, sed
+│  └─ find, locate, xargs
+├─ Applications
+│  ├─ Web servers (nginx, Apache)
+│  ├─ Databases (PostgreSQL, MySQL)
+│  └─ Custom applications
+└─ Daemons
+   ├─ sshd (SSH service)
+   ├─ nginx (Web server)
+   └─ cron (Task scheduler)`,
+            table: [
+              ["Layer", "Purpose", "Examples"],
+              ["Shell", "Command interface", "bash, zsh, fish"],
+              ["Utilities", "System administration", "ls, grep, awk, sed"],
+              ["Applications", "End-user software", "Docker, Kubernetes, Node.js"],
+              ["Daemons", "Background services", "sshd, nginx, mysqld"]
+            ]
           }
         ]
       },
       {
-        key: "intermediate",
-        title: "Intermediate Java Topics",
+        key: "syscalls-2",
+        title: "1.2 SYSTEM CALL INTERFACE (User ↔ Kernel Gateway)",
         topics: [
           {
-            id: "java-loops",
-            title: "Loops",
-            body: "Loops repeat statements while a condition is true or for a known number of iterations.",
-            code: "for (int i = 1; i <= 5; i++) {\n  System.out.println(i);\n}"
+            id: "linux-syscalls-1",
+            number: 3,
+            title: "Core System Calls - Process Management",
+            body: "System calls bridge user space and kernel space, allowing applications to request OS services.",
+            code: `Process Management Syscalls:
+
+fork() - Create new process
+  - Duplicates parent process
+  - Child gets new PID
+  - Returns parent PID to parent, 0 to child
+
+vfork() - Fast process creation
+  - Child shares parent's memory
+  - Parent blocked until child exec()
+
+execve() - Execute program
+  - Replace process image with new program
+  - Loads new executable
+
+wait() / waitpid() - Wait for child
+  - Parent blocks until child exits
+  - Prevents zombie processes
+
+clone() - Advanced process creation
+  - Create thread or process
+  - Fine-grained control over sharing`,
+            table: [
+              ["Syscall", "Purpose", "Return Value"],
+              ["fork()", "Create new process", "PID in parent, 0 in child"],
+              ["execve()", "Replace process", "Never returns on success"],
+              ["wait()", "Wait for child", "Child's PID and exit status"],
+              ["clone()", "Create thread/process", "New PID/TID"]
+            ]
           },
           {
-            id: "java-methods",
-            title: "Methods",
-            body: "Methods organize reusable behavior and can accept parameters and return values.",
-            code: "static int add(int a, int b) {\n  return a + b;\n}"
-          },
-          {
-            id: "java-arrays",
-            title: "Arrays",
-            body: "Arrays store multiple values of the same type in indexed positions.",
-            code: "int[] scores = {90, 85, 100};\nSystem.out.println(scores[0]);"
-          },
-          {
-            id: "java-classes",
-            title: "Classes and Objects",
-            body: "A class is a blueprint, and an object is an instance created from that blueprint.",
-            code: "class Student {\n  String name;\n}\n\nStudent student = new Student();"
+            id: "linux-syscalls-2",
+            number: 4,
+            title: "Core System Calls - File Operations",
+            body: "File-related system calls provide access to filesystem data.",
+            code: `File Operation Syscalls:
+
+open() - Open file descriptor
+  int fd = open("/path/file", O_RDONLY);
+
+read() - Read data from file
+  bytes_read = read(fd, buffer, count);
+
+write() - Write data to file
+  bytes_written = write(fd, data, length);
+
+close() - Close file descriptor
+  close(fd);
+
+lseek() - Seek in file
+  offset = lseek(fd, pos, SEEK_SET);
+
+stat() - Get file metadata
+  stat(filename, &statbuf);
+
+mmap() - Memory map file
+  void *addr = mmap(NULL, size, PROT_READ, 
+                    MAP_SHARED, fd, 0);`,
+            table: [
+              ["Syscall", "Purpose", "Example"],
+              ["open()", "Create/open file", "open('/etc/passwd', O_RDONLY)"],
+              ["read()", "Read bytes", "read(fd, buf, 1024)"],
+              ["write()", "Write bytes", "write(fd, 'data', 4)"],
+              ["close()", "Close descriptor", "close(fd)"],
+              ["stat()", "Get metadata", "stat('/tmp', &sb)"]
+            ]
           }
         ]
       },
       {
-        key: "advanced",
-        title: "Advanced Java Topics",
+        key: "kernel-iface-3",
+        title: "1.3 KERNEL INTERFACES (/proc /sys /dev)",
         topics: [
           {
-            id: "java-inheritance",
-            title: "Inheritance",
-            body: "Inheritance lets one class reuse fields and methods from another class.",
-            code: "class Animal {}\nclass Dog extends Animal {}"
-          },
+            id: "linux-proc-1",
+            number: 5,
+            title: "/proc Filesystem - Process Information",
+            body: "The /proc filesystem is a virtual interface to kernel data structures and process information.",
+            code: `/proc/<pid>/
+├─ cmdline        → command line arguments
+├─ environ        → environment variables
+├─ fd/            → file descriptors
+├─ maps           → memory map
+├─ stat           → process statistics
+├─ status         → process status
+└─ io             → I/O statistics
+
+System Information:
+/proc/cpuinfo     → CPU information
+/proc/meminfo     → Memory information
+/proc/loadavg     → System load average
+/proc/uptime      → System uptime
+/proc/net/        → Network statistics`,
+            table: [
+              ["File", "Content", "Example Command"],
+              ["/proc/cpuinfo", "CPU details", "grep processor /proc/cpuinfo"],
+              ["/proc/meminfo", "Memory stats", "grep MemTotal /proc/meminfo"],
+              ["/proc/loadavg", "Load average", "cat /proc/loadavg"],
+              ["/proc/<pid>/stat", "Process stats", "cat /proc/1234/stat"]
+            ]
+          }
+        ]
+      },
+      {
+        key: "boot-init-4",
+        title: "1.4 BOOT SEQUENCE & SYSTEMD INIT",
+        topics: [
           {
-            id: "java-polymorphism",
-            title: "Polymorphism",
-            body: "Polymorphism lets the same method call behave differently based on the object type.",
-            code: "Animal animal = new Dog();"
-          },
-          {
-            id: "java-interfaces",
-            title: "Interfaces",
-            body: "Interfaces define contracts that classes can implement.",
-            code: "interface Payable {\n  void pay();\n}"
-          },
-          {
-            id: "java-exceptions",
-            title: "Exception Handling",
-            body: "Exception handling lets programs respond to runtime failures without crashing immediately.",
-            code: "try {\n  riskyWork();\n} catch (Exception ex) {\n  ex.printStackTrace();\n}"
+            id: "linux-boot-1",
+            number: 6,
+            title: "Boot Pipeline - BIOS to systemd",
+            body: "Linux boot process from firmware to fully booted system.",
+            code: `Boot Sequence:
+
+1. FIRMWARE PHASE
+   ├─ BIOS/UEFI startup
+   ├─ Hardware initialization
+   ├─ Bootloader loading (GRUB2)
+   └─ Kernel image loading
+
+2. KERNEL PHASE
+   ├─ Kernel decompression
+   ├─ Memory initialization
+   ├─ Device driver loading
+   └─ Root filesystem discovery
+
+3. INITRAMFS PHASE
+   ├─ Minimal root filesystem
+   ├─ Storage driver loading
+   ├─ Filesystem check (fsck)
+   └─ Root filesystem mounting
+
+4. SYSTEMD PHASE
+   ├─ Load configuration
+   ├─ Parse target
+   ├─ Start services
+   └─ Login prompt ready`,
+            table: [
+              ["Stage", "Loader", "Function"],
+              ["Firmware", "BIOS/UEFI", "Hardware init"],
+              ["Bootloader", "GRUB2", "Kernel selection"],
+              ["Kernel", "Linux kernel", "Hardware detection"],
+              ["Initramfs", "Busybox", "Boot environment"],
+              ["Init", "systemd", "Service orchestration"]
+            ]
           }
         ]
       }
     ]
   },
-  python: {
-  label: "Python",
-  description: "Complete Python roadmap from beginner to advanced including core concepts, libraries, AI, data engineering, automation, and frameworks.",
-
-  levels: [
-    {
+  java: {
+    label: "Java",
+    description: "Java programming language fundamentals",
+    levels: [{
       key: "basic",
-      title: "1. Python Fundamentals",
-
-      topics: [
-        {
-          id: "python-installation",
-          title: "Python Installation",
-          body: "Install Python from python.org and verify installation using terminal commands.",
-          code: "python --version\npip --version"
-        },
-
-        {
-          id: "python-ides",
-          title: "Python IDEs",
-          body: "Popular Python IDEs include VS Code, PyCharm, Jupyter Notebook, Spyder, and IDLE.",
-          code: "# VS Code\n# PyCharm\n# Jupyter Notebook"
-        },
-
-        {
-          id: "python-variables",
-          title: "Variables",
-          body: "Variables store values in memory and are dynamically typed in Python.",
-          code: "name = \"Ravi\"\nage = 25\nsalary = 5000.50"
-        },
-
-        {
-          id: "python-datatypes",
-          title: "Data Types",
-          body: "Python supports int, float, str, bool, list, tuple, set, and dictionary.",
-          table: [
-            ["Type", "Example"],
-            ["int", "10"],
-            ["float", "10.5"],
-            ["str", "\"Python\""],
-            ["list", "[1,2,3]"],
-            ["tuple", "(1,2)"],
-            ["dict", "{\"name\":\"Ravi\"}"],
-            ["set", "{1,2,3}"]
-          ]
-        },
-
-        {
-          id: "python-input-output",
-          title: "Input and Output",
-          body: "Use input() to receive user input and print() to display output.",
-          code: "name = input(\"Enter your name: \")\nprint(name)"
-        },
-
-        {
-          id: "python-type-casting",
-          title: "Type Casting",
-          body: "Convert one datatype into another using int(), float(), and str().",
-          code: "num = \"100\"\nvalue = int(num)\nprint(value + 50)"
-        },
-
-        {
-          id: "python-operators",
-          title: "Operators",
-          body: "Python supports arithmetic, logical, assignment, comparison, and bitwise operators.",
-          code: "a = 10\nb = 5\nprint(a + b)\nprint(a > b)"
-        },
-
-        {
-          id: "python-comments",
-          title: "Comments",
-          body: "Comments improve readability and documentation in code.",
-          code: "# Single line comment\n'''Multi-line comment'''"
-        },
-
-        {
-          id: "python-keywords",
-          title: "Keywords",
-          body: "Keywords are reserved words with special meanings in Python.",
-          code: "import keyword\nprint(keyword.kwlist)"
-        },
-
-        {
-          id: "python-indentation",
-          title: "Indentation",
-          body: "Python uses indentation to define blocks of code.",
-          code: "if True:\n    print(\"Hello World\")"
-        },
-
-        {
-          id: "python-if-else",
-          title: "If Else Conditions",
-          body: "Conditional statements control program flow.",
-          code: "age = 20\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")"
-        },
-
-        {
-          id: "python-loops",
-          title: "Loops",
-          body: "Use loops for repeated execution of code blocks.",
-          code: "for i in range(5):\n    print(i)"
-        },
-
-        {
-          id: "python-break-continue-pass",
-          title: "Break Continue Pass",
-          body: "Loop control statements modify iteration behavior.",
-          code: "for i in range(5):\n    if i == 2:\n        continue\n    print(i)"
-        },
-
-        {
-          id: "python-functions",
-          title: "Functions",
-          body: "Functions organize reusable blocks of code.",
-          code: "def add(a, b):\n    return a + b\n\nprint(add(2, 3))"
-        },
-
-        {
-          id: "python-lambda",
-          title: "Lambda Functions",
-          body: "Lambda functions are anonymous one-line functions.",
-          code: "square = lambda x: x * x\nprint(square(5))"
-        },
-
-        {
-          id: "python-recursion",
-          title: "Recursion",
-          body: "Recursion allows a function to call itself.",
-          code: "def factorial(n):\n    if n == 1:\n        return 1\n    return n * factorial(n-1)"
-        },
-
-        {
-          id: "python-lists",
-          title: "Lists",
-          body: "Lists are ordered mutable collections.",
-          code: "numbers = [1,2,3]\nnumbers.append(4)"
-        },
-
-        {
-          id: "python-tuples",
-          title: "Tuples",
-          body: "Tuples are ordered immutable collections.",
-          code: "point = (10,20)"
-        },
-
-        {
-          id: "python-sets",
-          title: "Sets",
-          body: "Sets store unique unordered values.",
-          code: "nums = {1,2,3}"
-        },
-
-        {
-          id: "python-dictionaries",
-          title: "Dictionaries",
-          body: "Dictionaries store key-value pairs.",
-          code: "user = {\"name\":\"Ravi\",\"age\":25}"
-        },
-
-        {
-          id: "python-list-comprehension",
-          title: "List Comprehension",
-          body: "List comprehensions create lists in a compact syntax.",
-          code: "squares = [x*x for x in range(5)]"
-        }
-      ]
-    },
-
-    {
-      key: "intermediate",
-      title: "2. Intermediate Python",
-
-      topics: [
-        {
-          id: "python-modules",
-          title: "Modules and Packages",
-          body: "Modules and packages organize reusable Python code.",
-          code: "import math\nprint(math.sqrt(25))"
-        },
-
-        {
-          id: "python-exception-handling",
-          title: "Exception Handling",
-          body: "Exception handling manages runtime errors.",
-          code: "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")"
-        },
-
-        {
-          id: "python-file-handling",
-          title: "File Handling",
-          body: "Read and write files using open() and with statements.",
-          code: "with open(\"data.txt\", \"w\") as file:\n    file.write(\"Hello\")"
-        },
-
-        {
-          id: "python-oops",
-          title: "Object Oriented Programming",
-          body: "OOP uses classes and objects for reusable code design.",
-          code: "class Student:\n    def __init__(self, name):\n        self.name = name"
-        },
-
-        {
-          id: "python-generators",
-          title: "Iterators and Generators",
-          body: "Generators produce values lazily using yield.",
-          code: "def generator():\n    yield 1\n    yield 2"
-        },
-
-        {
-          id: "python-regex",
-          title: "Regular Expressions",
-          body: "Regular expressions perform pattern matching.",
-          code: "import re\ntext = \"python123\"\nprint(re.findall(r'\\d+', text))"
-        },
-
-        {
-          id: "python-json",
-          title: "JSON Handling",
-          body: "JSON is used for data interchange.",
-          code: "import json\ndata = {\"name\":\"Ravi\"}\nprint(json.dumps(data))"
-        }
-      ]
-    },
-
-    {
-      key: "advanced",
-      title: "3. Advanced Python",
-
-      topics: [
-        {
-          id: "python-decorators",
-          title: "Decorators",
-          body: "Decorators extend function behavior dynamically.",
-          code: "def decorator(func):\n    def wrapper():\n        print(\"Before function\")\n        func()\n    return wrapper"
-        },
-
-        {
-          id: "python-dataclasses",
-          title: "Dataclasses",
-          body: "Dataclasses reduce boilerplate class code.",
-          code: "from dataclasses import dataclass\n\n@dataclass\nclass User:\n    name:str"
-        },
-
-        {
-          id: "python-multithreading",
-          title: "Multithreading",
-          body: "Threads allow concurrent execution.",
-          code: "import threading"
-        },
-
-        {
-          id: "python-asyncio",
-          title: "Async Programming",
-          body: "Asyncio enables asynchronous programming.",
-          code: "import asyncio"
-        },
-
-        {
-          id: "python-logging",
-          title: "Logging",
-          body: "Logging tracks events and errors.",
-          code: "import logging\nlogging.warning(\"Warning message\")"
-        },
-
-        {
-          id: "python-numpy",
-          title: "NumPy",
-          body: "NumPy provides numerical computing support.",
-          code: "import numpy as np"
-        },
-
-        {
-          id: "python-pandas",
-          title: "Pandas",
-          body: "Pandas handles DataFrame operations and ETL processing.",
-          code: "import pandas as pd"
-        },
-
-        {
-          id: "python-matplotlib",
-          title: "Matplotlib",
-          body: "Matplotlib creates charts and visualizations.",
-          code: "import matplotlib.pyplot as plt"
-        },
-
-        {
-          id: "python-sklearn",
-          title: "Scikit Learn",
-          body: "Scikit-learn provides machine learning algorithms.",
-          code: "from sklearn.linear_model import LinearRegression"
-        },
-
-        {
-          id: "python-tensorflow",
-          title: "TensorFlow",
-          body: "TensorFlow is used for deep learning and AI.",
-          code: "import tensorflow as tf"
-        },
-
-        {
-          id: "python-pytorch",
-          title: "PyTorch",
-          body: "PyTorch is a popular deep learning framework.",
-          code: "import torch"
-        },
-
-        {
-          id: "python-pyspark",
-          title: "PySpark",
-          body: "PySpark handles distributed big data processing.",
-          code: "from pyspark.sql import SparkSession"
-        },
-
-        {
-          id: "python-fastapi",
-          title: "FastAPI",
-          body: "FastAPI builds high-performance APIs.",
-          code: "from fastapi import FastAPI"
-        },
-
-        {
-          id: "python-django",
-          title: "Django",
-          body: "Django is a full-stack web framework.",
-          code: "django-admin startproject mysite"
-        },
-
-        {
-          id: "python-flask",
-          title: "Flask",
-          body: "Flask is a lightweight Python web framework.",
-          code: "from flask import Flask"
-        },
-
-        {
-          id: "python-selenium",
-          title: "Selenium",
-          body: "Selenium automates browser actions.",
-          code: "from selenium import webdriver"
-        },
-
-        {
-          id: "python-boto3",
-          title: "AWS Boto3",
-          body: "Boto3 is the AWS SDK for Python.",
-          code: "import boto3"
-        },
-
-        {
-          id: "python-langchain",
-          title: "LangChain",
-          body: "LangChain helps build LLM applications.",
-          code: "from langchain.llms import OpenAI"
-        }
-      ]
-    }
-  ]
-},
+      title: "Basic Java",
+      topics: [{
+        id: "java-1",
+        number: 1,
+        title: "Java Basics",
+        body: "Java is a widely-used object-oriented programming language.",
+        code: `public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}`
+      }]
+    }]
+  },
+  python: {
+    label: "Python",
+    description: "Python programming language",
+    levels: [{
+      key: "basic",
+      title: "Basic Python",
+      topics: [{
+        id: "python-1",
+        number: 1,
+        title: "Python Basics",
+        body: "Python is a versatile programming language.",
+        code: `print('Hello World')
+name = 'Alice'
+print(f'Hello {name}')`
+      }]
+    }]
+  },
   sql: {
     label: "SQL",
-    description: "A compact guide to querying, filtering, joining, and grouping relational data.",
-    levels: [
-      {
-        key: "basic",
-        title: "Basic SQL Topics",
-        topics: [
-          {
-            id: "sql-select",
-            title: "SELECT",
-            body: "SELECT retrieves columns from one or more database tables.",
-            code: "SELECT first_name, last_name\nFROM employees;"
-          },
-          {
-            id: "sql-where",
-            title: "WHERE",
-            body: "WHERE filters rows based on one or more conditions.",
-            code: "SELECT *\nFROM employees\nWHERE department = 'Sales';"
-          },
-          {
-            id: "sql-order-by",
-            title: "ORDER BY",
-            body: "ORDER BY sorts query results in ascending or descending order.",
-            code: "SELECT *\nFROM employees\nORDER BY hire_date DESC;"
-          },
-          {
-            id: "sql-limit",
-            title: "LIMIT",
-            body: "LIMIT restricts how many rows a query returns.",
-            code: "SELECT *\nFROM employees\nLIMIT 10;"
-          }
-        ]
-      },
-      {
-        key: "intermediate",
-        title: "Intermediate SQL Topics",
-        topics: [
-          {
-            id: "sql-join",
-            title: "JOIN",
-            body: "JOIN combines rows from related tables.",
-            code: "SELECT e.name, d.name AS department\nFROM employees e\nJOIN departments d ON e.department_id = d.id;"
-          },
-          {
-            id: "sql-group-by",
-            title: "GROUP BY",
-            body: "GROUP BY aggregates rows that share common values.",
-            code: "SELECT department_id, COUNT(*) AS total\nFROM employees\nGROUP BY department_id;"
-          },
-          {
-            id: "sql-having",
-            title: "HAVING",
-            body: "HAVING filters grouped results after aggregation.",
-            code: "SELECT department_id, COUNT(*) AS total\nFROM employees\nGROUP BY department_id\nHAVING COUNT(*) > 5;"
-          },
-          {
-            id: "sql-subqueries",
-            title: "Subqueries",
-            body: "Subqueries nest one query inside another query.",
-            code: "SELECT name\nFROM employees\nWHERE salary > (SELECT AVG(salary) FROM employees);"
-          }
-        ]
-      },
-      {
-        key: "advanced",
-        title: "Advanced SQL Topics",
-        topics: [
-          {
-            id: "sql-window-functions",
-            title: "Window Functions",
-            body: "Window functions calculate values across related rows while keeping individual rows visible.",
-            code: "SELECT name, salary,\n       RANK() OVER (ORDER BY salary DESC) AS salary_rank\nFROM employees;"
-          },
-          {
-            id: "sql-cte",
-            title: "Common Table Expressions",
-            body: "CTEs make complex queries easier to read by naming intermediate result sets.",
-            code: "WITH high_earners AS (\n  SELECT * FROM employees WHERE salary > 100000\n)\nSELECT * FROM high_earners;"
-          },
-          {
-            id: "sql-indexes",
-            title: "Indexes",
-            body: "Indexes speed up reads on selected columns, usually with a tradeoff on writes and storage.",
-            code: "CREATE INDEX idx_employees_department\nON employees(department_id);"
-          },
-          {
-            id: "sql-transactions",
-            title: "Transactions",
-            body: "Transactions group multiple statements into a single all-or-nothing unit of work.",
-            code: "BEGIN;\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;"
-          }
-        ]
-      }
-    ]
+    description: "SQL database queries",
+    levels: [{
+      key: "basic",
+      title: "Basic SQL",
+      topics: [{
+        id: "sql-1",
+        number: 1,
+        title: "SQL Basics",
+        body: "SQL is used to query relational databases.",
+        code: `SELECT name, email FROM users 
+WHERE status = 'active';`
+      }]
+    }]
   }
 };
+
+// ============================================================================
+// GLOBAL STATE & DOM ELEMENTS
+// ============================================================================
 
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.getElementById("sidebar");
@@ -2008,8 +830,13 @@ const emptyState = document.getElementById("emptyState");
 let activeTab = "linux";
 let activeTopicId = "";
 let currentTopics = [];
+let searchIndex = [];
 
-function escapeHtml(value){
+// ============================================================================
+// UTILITY FUNCTIONS
+// ============================================================================
+
+function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -2018,45 +845,34 @@ function escapeHtml(value){
     .replace(/'/g, "&#039;");
 }
 
-function levelNumberedTopics(level){
-  return level.topics.map((topic, index) => ({
-    ...topic,
-    levelTitle: level.title,
-    levelKey: level.key,
-    number: topic.number || index + 1
-  }));
+function buildSearchIndex() {
+  searchIndex = [];
+  
+  Object.entries(docs).forEach(([tab, doc]) => {
+    doc.levels.forEach(level => {
+      level.topics.forEach(topic => {
+        searchIndex.push({
+          type: 'topic',
+          tab: tab,
+          id: topic.id,
+          title: topic.title,
+          body: topic.body,
+          code: topic.code || '',
+          searchText: `${topic.title} ${topic.body} ${topic.code || ''}`.toLowerCase()
+        });
+      });
+    });
+  });
 }
 
-function numberedLevels(doc){
-  let nextNumber = 1;
+// ============================================================================
+// RENDER FUNCTIONS
+// ============================================================================
 
-  return doc.levels.map(level => ({
-    ...level,
-    topics: level.topics.map(topic => ({
-      ...topic,
-      originalNumber: topic.number,
-      levelTitle: level.title,
-      levelKey: level.key,
-      number: nextNumber++
-    }))
-  }));
-}
-
-function getAllTopics(doc){
-  return numberedLevels(doc).flatMap(level => level.topics);
-}
-
-function topicLabel(topic){
-  return `${topic.number ? topic.number + ". " : ""}${topic.title}`;
-}
-
-function renderTable(rows){
-  if(!rows){
-    return "";
-  }
-
+function renderTable(rows) {
+  if (!rows || !rows.length) return "";
+  
   const [header, ...body] = rows;
-
   return `
     <table>
       <thead>
@@ -2069,471 +885,82 @@ function renderTable(rows){
   `;
 }
 
-function getCodeLanguage(){
-  if(activeTab === "sql") return "sql";
-  if(activeTab === "python") return "python";
-  if(activeTab === "java") return "java";
-  return "bash";
-}
-
-function renderCode(code){
-  if(!code){
-    return "";
-  }
-
+function renderCode(code) {
+  if (!code) return "";
+  
   return `
     <div class="code-box">
       <div class="code-header">
-        <span>Example</span>
+        <span>Code Example</span>
         <button class="copy-btn" type="button">Copy</button>
       </div>
-      <pre><code class="language-${getCodeLanguage()}">${escapeHtml(code)}</code></pre>
+      <pre><code>${escapeHtml(code)}</code></pre>
     </div>
   `;
 }
 
-function firstExampleLine(code){
-  if(!code){
-    return "";
-  }
-
-  return code.split("\n").find(line => line.trim())?.trim() || "";
-}
-
-function exampleLines(code){
-  if(!code){
-    return [];
-  }
-
-  return code.split("\n").map(line => line.trim()).filter(Boolean);
-}
-
-function pickExample(lines, index){
-  if(!lines.length){
-    return "";
-  }
-
-  return lines[index] || lines[lines.length - 1];
-}
-
-function explainExampleLine(topic, line){
-  if(activeTab === "linux"){
-    const parts = line.split(/\s+/);
-    const command = parts[0] || topic.subject || topic.title;
-    const rest = parts.slice(1).join(" ");
-    const purpose = topic.purpose || "complete the task";
-
-    if(rest){
-      return `This runs ${command}. The extra part, ${rest}, gives the command its options, input, file name, folder name, filter, or target. In this topic, that helps you ${purpose}.`;
-    }
-
-    return `This runs ${command} by itself. That is usually the simplest form of the command, and it helps you ${purpose} with the default behavior.`;
-  }
-
-  if(activeTab === "sql"){
-    const firstWord = line.split(/\s+/)[0] || "This SQL line";
-    return `${firstWord} is part of the query. Read it from top to bottom: choose data, choose where it comes from, then filter, group, or sort it depending on the topic.`;
-  }
-
-  return `This line is one small instruction in the program. Read it slowly from left to right, identify the values or names, then run the code to see how this topic changes the output.`;
-}
-
-function renderCommandDetails(topic){
-  const lines = exampleLines(topic.code);
-
-  if(!lines.length){
-    return "";
-  }
-
-  return `
-    <div class="real-world-box">
-      <h4>Command details</h4>
-      <p>This topic includes the commands below with a concise explanation for each line.</p>
-      ${lines.map(line => `
-        <div class="breakdown-row">
-          <strong>${escapeHtml(line)}</strong>
-          <p>${escapeHtml(explainExampleLine(topic, line))}</p>
-        </div>
-      `).join("")}
-    </div>
-  `;
-}
-
-function renderSystemNavigationCards(){
-  const cards = [
-    {
-      title: "ls – List Directory Contents",
-      purpose: "Lists files and directories.",
-      flags: [
-        ["-l", "Long listing with permissions, owner, size, modification time"],
-        ["-a", "Show hidden files (starting with .)"],
-        ["-A", "Show almost all, exclude . and .."],
-        ["-h", "Human-readable file sizes (KB, MB, GB)"],
-        ["-R", "Recursive, lists subdirectories"],
-        ["-t", "Sort by modification time, newest first"],
-        ["-S", "Sort by file size"],
-        ["-r", "Reverse sort order"],
-        ["-d", "Show directory info, not contents"],
-        ["--color", "Color-coded output by file type"],
-        ["-1", "One file per line"],
-        ["-F", "Append indicator (/ for directories, * for executables)"],
-        ["-i", "Show inode number"],
-        ["-X", "Sort alphabetically by extension"]
-      ],
-      examples: [
-        "ls → Basic listing.",
-        "ls -l → Long format with permissions.",
-        "ls -lh → Human-readable sizes.",
-        "ls -a → Show hidden files like .bashrc.",
-        "ls -A → Like -a but skips . and ..",
-        "ls -lt → Sort by modification time.",
-        "ls -lS → Sort by size.",
-        "ls -lR → Recursive list of subdirectories.",
-        "ls -F → Identify directories (*) and executables."
-      ]
-    },
-    {
-      title: "cd – Change Directory",
-      purpose: "Navigate between directories.",
-      examples: [
-        "cd / → Root directory",
-        "cd ./dir → Relative path",
-        "cd /var/log → Move to logs",
-        "cd .. → Up one level",
-        "cd ../.. → Up two levels",
-        "cd - → Return to last directory",
-        "cd ~/Documents → Home Documents",
-        "cd ./projects → Relative path",
-        "cd /tmp → Temp folder",
-        "cd /home/user/Desktop → Desktop",
-        "cd /var/www/html → Web server folder",
-        "cd /etc/apache2/sites-available → Apache configs",
-        "cd $OLDPWD → Using environment variable",
-        "cd \"$MY_PROJECT\" → Environment variable path"
-      ]
-    },
-    {
-      title: "pwd – Print Working Directory",
-      purpose: "Show full path of current directory.",
-      flags: [
-        ["-L", "Logical path (keeps symlinks)"],
-        ["-P", "Physical path (resolves symlinks)"]
-      ],
-      examples: [
-        "pwd → /home/user/projects",
-        "pwd -L → Logical path",
-        "pwd -P → Physical path",
-        "cd /tmp && pwd → Confirm location",
-        "echo \"Current dir: $(pwd)\" → Script usage",
-        "pwd > current_path.txt → Save path to file"
-      ]
-    },
-    {
-      title: "clear – Clear Terminal Screen",
-      purpose: "Reset the terminal view to a blank screen.",
-      examples: [
-        "clear → Clear the terminal",
-        "ctrl+l → Keyboard shortcut for clear",
-        "clear && ls → Clear screen then list files"
-      ]
-    },
-    {
-      title: "history – Show Shell History",
-      purpose: "Display previously executed commands.",
-      examples: [
-        "history → Show command history",
-        "history | tail → Show last commands",
-        "!123 → Repeat command number 123",
-        "history -c → Clear history in current shell"
-      ]
-    },
-    {
-      title: "whoami – Current User",
-      purpose: "Show the current logged in user.",
-      examples: [
-        "whoami → Display current user",
-        "sudo whoami → Show user for sudo session"
-      ]
-    },
-    {
-      title: "id – User and Group IDs",
-      purpose: "Display user and group identity information.",
-      examples: [
-        "id → Show current UID/GID and groups",
-        "id alice → Show alice’s IDs",
-        "id -u → Show numeric user ID",
-        "id -g → Show numeric group ID"
-      ]
-    },
-    {
-      title: "hostname – Machine Hostname",
-      purpose: "Show or set the current host name.",
-      examples: [
-        "hostname → Show machine hostname",
-        "hostnamectl status → Display hostname details"
-      ]
-    },
-    {
-      title: "uname – System Information",
-      purpose: "Print kernel and OS details.",
-      flags: [
-        ["-a", "All available system information"],
-        ["-r", "Kernel release"],
-        ["-s", "Kernel name"],
-        ["-m", "Machine hardware name"]
-      ],
-      examples: [
-        "uname -a → Full system information",
-        "uname -r → Kernel release",
-        "uname -m → Hardware architecture"
-      ]
-    },
-    {
-      title: "man – Read Command Manual",
-      purpose: "Open the manual page for a command.",
-      examples: [
-        "man ls → Read ls manual",
-        "man -k network → Search manual keywords",
-        "man man → Read the man page utility documentation"
-      ]
-    }
-  ];
-
-  return `
-    <div class="tab-content active" id="linux">
-      ${cards.map((card, index) => `
-        <div class="card${index === 0 ? " expanded" : ""}">
-          <div class="card-header" onclick="toggleCard(this)">
-            <span>${index + 1}. ${escapeHtml(card.title)}</span>
-            <span class="arrow">${index === 0 ? "▲" : "▼"}</span>
-          </div>
-          <div class="card-content">
-            <p><b>Purpose:</b> ${escapeHtml(card.purpose)}</p>
-            ${card.flags ? `
-              <table>
-                <tr><th>Flag</th><th>Meaning</th></tr>
-                ${card.flags.map(([flag, meaning]) => `
-                  <tr><td>${escapeHtml(flag)}</td><td>${escapeHtml(meaning)}</td></tr>
-                `).join("")}
-              </table>
-            ` : ""}
-            ${card.examples ? `
-              <h4>Examples & Scenarios</h4>
-              <table class="example-table">
-                <tr><th>Command</th><th>Description</th></tr>
-                ${card.examples.map(example => {
-                  const parts = example.split("→");
-                  const cmd = parts.shift().trim();
-                  const desc = parts.join("→").trim();
-                  return `
-                    <tr>
-                      <td><code>${escapeHtml(cmd)}</code></td>
-                      <td>${escapeHtml(desc)}</td>
-                    </tr>
-                  `;
-                }).join("")}
-              </table>
-            ` : ""}
-          </div>
-        </div>
-      `).join("")}
-    </div>
-  `;
-}
-
-function toggleCard(header) {
-  const card = header.closest(".card");
-  if (!card) return;
-  const expanded = card.classList.toggle("expanded");
-  const arrow = header.querySelector(".arrow");
-  if (arrow) {
-    arrow.textContent = expanded ? "▲" : "▼";
-  }
-}
-
-function renderCommandCard(topic, command, index) {
-  const commandCombinations = command.combinations || [];
-  const combosMarkup = commandCombinations.length
-    ? `<div class="command-related"><h5>Command combinations</h5><ul>${commandCombinations.map(combo => `<li><code>${escapeHtml(combo)}</code></li>`).join("")}</ul></div>`
-    : "";
-
-  return `
-    <div class="card${index === 0 ? " expanded" : ""}">
-      <div class="card-header" onclick="toggleCard(this)">
-        <span>${index + 1}. ${escapeHtml(command.title)}</span>
-        <span class="arrow">${index === 0 ? "▲" : "▼"}</span>
-      </div>
-      <div class="card-content">
-        <p><b>Description:</b> ${escapeHtml(command.description)}</p>
-        ${renderCode(command.code)}
-        ${command.useCases?.length ? `
-          <div class="command-usecases">
-            <h5>Use cases</h5>
-            <ul>
-              ${command.useCases.map(useCase => `<li>${escapeHtml(useCase)}</li>`).join("")}
-            </ul>
-          </div>
-        ` : ""}
-        ${command.details ? `
-          <div class="command-related">
-            <h5>Notes</h5>
-            <p>${escapeHtml(command.details)}</p>
-          </div>
-        ` : ""}
-        ${combosMarkup}
-      </div>
-    </div>
-  `;
-}
-
-function renderCommandGroup(topic, subtopic, index){
-  return `
-    <div class="subtopic-card">
-      <div class="subtopic-card-header">
-        <div>
-          <h4>${escapeHtml(subtopic.title)}</h4>
-          <p>${escapeHtml(subtopic.description)}</p>
-        </div>
-      </div>
-      <div class="subtopic-card-body">
-        ${subtopic.commands.map((command, commandIndex) => renderCommandCard(topic, command, commandIndex)).join("")}
-      </div>
-    </div>
-  `;
-}
-
-function renderSubtopicGroups(topic){
-  return `
-    <div class="subtopic-groups">
-      ${topic.subtopics.map((subtopic, index) => renderCommandGroup(topic, subtopic, index)).join("")}
-    </div>
-  `;
-}
-
-function renderCommandCards(topic) {
-  return `
-    <div class="tab-content active" id="linux">
-      ${topic.commands.map((command, index) => renderCommandCard(topic, command, index)).join("")}
-    </div>
-  `;
-}
-
-function renderCommandTabs(topic){
-  if(!topic.commands?.length){
-    return "";
-  }
-
-  if(topic.id === "linux-system-navigation-commands"){
-    return renderSystemNavigationCards();
-  }
-
-  if(topic.subtopics?.length){
-    return renderSubtopicGroups(topic);
-  }
-
-  return renderCommandCards(topic);
-}
-
-function renderPlainExplanation(topic){
-  if(activeTab === "linux"){
-    const subject = topic.subject || topic.title.split(" - ")[0];
-    const purpose = topic.purpose || "complete this Linux task";
-
-    return `
-      <div class="plain-explanation">
-        <h4>Plain English explanation</h4>
-        <ul>
-          <li><strong>What it does:</strong> ${escapeHtml(subject)} helps you ${escapeHtml(purpose)} from the terminal.</li>
-          <li><strong>When you use it:</strong> Use it when you are managing files, checking a system, fixing a problem, moving data, or automating repeated work.</li>
-          <li><strong>How to read the example:</strong> The first word is the command. Words after it are options, names, paths, patterns, or values that tell the command what to work on.</li>
-          <li><strong>What to watch for:</strong> Read the command before pressing Enter, especially when it changes files, permissions, users, processes, firewall rules, or scheduled jobs.</li>
-        </ul>
-      </div>
-    `;
-  }
-
-  if(activeTab === "sql"){
-    return `
-      <div class="plain-explanation">
-        <h4>Plain English explanation</h4>
-        <ul>
-          <li><strong>What it does:</strong> ${escapeHtml(topic.title)} helps you ask a database for a more useful result.</li>
-          <li><strong>When you use it:</strong> Use it when raw table data is too large and you need to select, filter, join, group, sort, or summarize it.</li>
-          <li><strong>How to read the example:</strong> SQL is read in clauses. Each line usually adds one instruction to the database.</li>
-          <li><strong>What to watch for:</strong> Check table names, column names, filters, and row counts so the query answers the intended question.</li>
-        </ul>
-      </div>
-    `;
-  }
-
-  return `
-    <div class="plain-explanation">
-      <h4>Plain English explanation</h4>
-      <ul>
-        <li><strong>What it does:</strong> ${escapeHtml(topic.title)} is one building block used to write clear programs.</li>
-        <li><strong>When you use it:</strong> Use it when your code needs to store data, make decisions, repeat work, organize logic, or reuse behavior.</li>
-        <li><strong>How to read the example:</strong> Look at one line at a time and identify names, values, symbols, and output.</li>
-        <li><strong>What to watch for:</strong> Small spelling, punctuation, indentation, or brace mistakes can change how the program runs.</li>
-      </ul>
-    </div>
-  `;
-}
-
-function renderTopic(topic){
+function renderTopic(topic) {
   const topicIndex = currentTopics.findIndex(item => item.id === topic.id);
   const previousTopic = currentTopics[topicIndex - 1];
   const nextTopic = currentTopics[topicIndex + 1];
 
   return `
-    <article id="${escapeHtml(topic.id)}" class="content-section searchable" data-level="${escapeHtml(topic.levelKey)}">
-      <h3>${escapeHtml(topic.number)}. ${escapeHtml(topic.title)}</h3>
-      <div class="topic-meta">${escapeHtml(topic.levelTitle)}</div>
+    <article id="${escapeHtml(topic.id)}" class="content-section">
+      <h3>${escapeHtml(topic.title)}</h3>
+      <div class="topic-meta">${escapeHtml(topic.levelTitle || "Topic")}</div>
       <p>${escapeHtml(topic.body)}</p>
-      ${renderPlainExplanation(topic)}
-      ${renderCommandTabs(topic)}
-      ${topic.commands?.length ? "" : renderCommandDetails(topic)}
+      
+      <div class="plain-explanation">
+        <h4>Key Points</h4>
+        <ul>
+          <li><strong>What it is:</strong> ${escapeHtml(topic.body)}</li>
+          <li><strong>When to use:</strong> Use this when working with system administration or Linux operations.</li>
+          <li><strong>How to read:</strong> Start from the top and follow the hierarchical structure.</li>
+        </ul>
+      </div>
+
+      ${renderCode(topic.code)}
       ${renderTable(topic.table)}
-      ${topic.commands?.length ? "" : renderCode(topic.code)}
+
       <div class="topic-nav">
-        <button type="button" class="topic-nav-btn" data-topic-id="${previousTopic ? escapeHtml(previousTopic.id) : ""}" ${previousTopic ? "" : "disabled"}>Previous</button>
-        <button type="button" class="topic-nav-btn" data-topic-id="${nextTopic ? escapeHtml(nextTopic.id) : ""}" ${nextTopic ? "" : "disabled"}>Next</button>
+        <button type="button" class="topic-nav-btn" data-topic-id="${previousTopic ? escapeHtml(previousTopic.id) : ""}" ${previousTopic ? "" : "disabled"}>← Previous</button>
+        <button type="button" class="topic-nav-btn" data-topic-id="${nextTopic ? escapeHtml(nextTopic.id) : ""}" ${nextTopic ? "" : "disabled"}>Next →</button>
       </div>
     </article>
   `;
 }
 
-function renderLevel(level){
-  const topics = levelNumberedTopics(level);
-
-  return `
-    <section class="level-section" data-level="${escapeHtml(level.key)}">
-      <h2 class="level-title">${escapeHtml(level.title)}</h2>
-      ${topics.map(renderTopic).join("")}
-    </section>
-  `;
-}
-
-function renderSidebar(doc){
-  topicGroups.innerHTML = numberedLevels(doc).map((level, index) => `
+function renderSidebar(doc) {
+  const levels = doc.levels;
+  
+  topicGroups.innerHTML = levels.map((level, index) => `
     <div class="topic-group ${index === 0 ? "open" : ""}">
       <button class="topic-head" type="button">
         <span>${escapeHtml(level.title)}</span>
         <i class="fa-solid ${index === 0 ? "fa-chevron-up" : "fa-chevron-down"}"></i>
       </button>
       <nav class="topic-list">
-        ${level.topics.map(topic => `<a href="#${escapeHtml(topic.id)}" data-topic-id="${escapeHtml(topic.id)}">${escapeHtml(topicLabel(topic))}</a>`).join("")}
+        ${level.topics.map((topic, tIndex) => `
+          <a href="#${escapeHtml(topic.id)}" data-topic-id="${escapeHtml(topic.id)}">
+            ${escapeHtml((topic.number || tIndex + 1) + ". " + topic.title)}
+          </a>
+        `).join("")}
       </nav>
     </div>
   `).join("");
 }
 
-function wireSidebarGroups(){
+// ============================================================================
+// EVENT HANDLERS
+// ============================================================================
+
+function wireSidebarGroups() {
   document.querySelectorAll(".topic-head").forEach(head => {
     head.addEventListener("click", () => {
       const group = head.closest(".topic-group");
       const icon = head.querySelector("i");
       const isOpen = group.classList.toggle("open");
-
+      
       icon.classList.toggle("fa-chevron-up", isOpen);
       icon.classList.toggle("fa-chevron-down", !isOpen);
     });
@@ -2547,185 +974,150 @@ function wireSidebarGroups(){
   });
 }
 
-function wireCopyButtons(){
+function wireCopyButtons() {
   document.querySelectorAll(".copy-btn").forEach(button => {
     button.addEventListener("click", () => {
       const code = button.closest(".code-box").querySelector("code").innerText;
-      copyText(code);
-      button.textContent = "Copied";
-
-      setTimeout(() => {
-        button.textContent = "Copy";
-      }, 1400);
+      navigator.clipboard.writeText(code).then(() => {
+        button.textContent = "Copied!";
+        setTimeout(() => {
+          button.textContent = "Copy";
+        }, 1400);
+      });
     });
   });
 }
 
-function copyText(text){
-  if(navigator.clipboard && window.isSecureContext){
-    navigator.clipboard.writeText(text);
-    return;
-  }
-
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  textarea.style.position = "fixed";
-  textarea.style.left = "-9999px";
-  document.body.appendChild(textarea);
-  textarea.focus();
-  textarea.select();
-  document.execCommand("copy");
-  textarea.remove();
-}
-
-function updateSidebarActive(topicId){
+function updateSidebarActive(topicId) {
   document.querySelectorAll(".topic-list a").forEach(link => {
-    const isActive = link.dataset.topicId === topicId;
-    link.classList.toggle("active", isActive);
-
-    if(isActive){
-      const group = link.closest(".topic-group");
-      const icon = group.querySelector(".topic-head i");
-      group.classList.add("open");
-      icon.classList.add("fa-chevron-up");
-      icon.classList.remove("fa-chevron-down");
-    }
+    link.classList.toggle("active", link.dataset.topicId === topicId);
   });
 }
 
-function wireTopicNavButtons(){
-  document.querySelectorAll(".topic-nav-btn").forEach(button => {
-    button.addEventListener("click", () => {
-      if(button.disabled || !button.dataset.topicId){
-        return;
-      }
-
-      selectTopic(button.dataset.topicId);
-    });
-  });
-}
-
-function wireCommandTabs(){
-  document.querySelectorAll(".cmd-tab-button").forEach(button => {
-    button.addEventListener("click", () => {
-      const commandId = button.dataset.commandId;
-      const container = button.closest(".content-section");
-
-      if(!container){
-        return;
-      }
-
-      container.querySelectorAll(".cmd-tab-button").forEach(tab => tab.classList.remove("active"));
-      container.querySelectorAll(".cmd-details").forEach(panel => panel.classList.remove("active"));
-
-      button.classList.add("active");
-      const activePanel = container.querySelector(`.cmd-details[data-command-id="${commandId}"]`);
-      if(activePanel){
-        activePanel.classList.add("active");
-      }
-    });
-  });
-}
-
-function selectTopic(topicId, options = {}){
+function selectTopic(topicId) {
   const topic = currentTopics.find(item => item.id === topicId);
-
-  if(!topic){
-    return;
-  }
-
+  
+  if (!topic) return;
+  
   activeTopicId = topic.id;
   content.innerHTML = renderTopic(topic);
   emptyState.style.display = "none";
   updateSidebarActive(activeTopicId);
   wireCopyButtons();
   wireTopicNavButtons();
-  wireCommandTabs();
+  
+  content.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
-  if(window.hljs){
-    hljs.highlightAll();
-  }
-
-  if(options.scroll !== false){
-    content.scrollIntoView({
-      behavior:"smooth",
-      block:"start"
+function wireTopicNavButtons() {
+  document.querySelectorAll(".topic-nav-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      if (button.disabled || !button.dataset.topicId) return;
+      selectTopic(button.dataset.topicId);
     });
-  }
+  });
 }
 
-function renderTab(tabName){
-  const doc = docs[tabName];
-  activeTab = tabName;
-  currentTopics = getAllTopics(doc);
-  activeTopicId = currentTopics[0]?.id || "";
-
-  sidebarTitle.textContent = `${doc.label} Topics`;
-  heroTitle.textContent = `Ultimate ${doc.label} Documentation Portal`;
-  heroText.textContent = doc.description;
-  searchBox.value = "";
-  searchBox.placeholder = `Search ${doc.label} topics...`;
-  searchResults.style.display = "none";
-  emptyState.style.display = "none";
-
-  renderSidebar(doc);
-  wireSidebarGroups();
-  selectTopic(activeTopicId, {scroll:false});
-}
-
-function clearSearchResults(){
-  searchResults.innerHTML = "";
-  searchResults.style.display = "none";
-  emptyState.style.display = "none";
-}
-
-function showSearchResults(matches){
-  if(!matches.length){
-    searchResults.innerHTML = `
-      <div class="search-item">
-        <h4>No matching topics found</h4>
-        <p>Try another keyword in the current tab.</p>
-      </div>
-    `;
-    searchResults.style.display = "block";
-    emptyState.style.display = "none";
+function performSearch(query) {
+  if (!query.trim()) {
+    searchResults.style.display = "none";
     return;
   }
 
-  searchResults.innerHTML = matches.map(topic => `
-    <div class="search-item" data-target="${escapeHtml(topic.id)}">
-      <h4>${escapeHtml(topicLabel(topic))}</h4>
-      <p>${escapeHtml(topic.levelTitle)} | Click to navigate instantly</p>
+  const lowerQuery = query.toLowerCase();
+  const matches = searchIndex
+    .filter(item => item.searchText.includes(lowerQuery))
+    .slice(0, 15);
+
+  if (matches.length === 0) {
+    searchResults.innerHTML = `
+      <div class="search-item">
+        <h4>No results found</h4>
+        <p>Try different keywords</p>
+      </div>
+    `;
+    searchResults.style.display = "block";
+    return;
+  }
+
+  searchResults.innerHTML = matches.map(item => `
+    <div class="search-item" data-tab="${item.tab}" data-topic-id="${item.id}">
+      <h4>${escapeHtml(item.title)}</h4>
+      <p>
+        ${escapeHtml(item.body.substring(0, 80))}...
+        <span class="search-item-badge">${item.tab.toUpperCase()}</span>
+      </p>
     </div>
   `).join("");
 
   searchResults.style.display = "block";
-  emptyState.style.display = "none";
 
   document.querySelectorAll(".search-item").forEach(item => {
     item.addEventListener("click", () => {
-      selectTopic(item.dataset.target);
-      clearSearchResults();
+      const tab = item.dataset.tab;
+      const topicId = item.dataset.topicId;
+      
+      switchTabAndSelectTopic(tab, topicId);
       searchBox.value = "";
+      searchResults.style.display = "none";
     });
   });
 }
 
-function searchTopics(){
-  const value = searchBox.value.trim().toLowerCase();
+function switchTabAndSelectTopic(tab, topicId) {
+  activeTab = tab;
+  const doc = docs[tab];
+  
+  if (!doc) return;
 
-  if(!value){
-    clearSearchResults();
-    return;
-  }
-
-  const matches = currentTopics.filter(topic => {
-    const searchableText = `${topic.title} ${topic.body} ${topic.levelTitle} ${topic.code || ""}`;
-    return searchableText.toLowerCase().includes(value);
+  currentTopics = [];
+  doc.levels.forEach(level => {
+    level.topics.forEach(topic => {
+      topic.levelTitle = level.title;
+      currentTopics.push(topic);
+    });
   });
 
-  showSearchResults(matches);
+  sidebarTitle.textContent = `${doc.label} Topics`;
+  heroTitle.textContent = `${doc.label} Master Guide`;
+  heroText.textContent = doc.description;
+
+  renderSidebar(doc);
+  wireSidebarGroups();
+  
+  tabs.forEach(t => t.classList.remove("active"));
+  document.querySelector(`[data-tab="${tab}"]`).classList.add("active");
+
+  selectTopic(topicId);
 }
+
+function renderTab(tabName) {
+  const doc = docs[tabName];
+  activeTab = tabName;
+  currentTopics = [];
+
+  doc.levels.forEach(level => {
+    level.topics.forEach(topic => {
+      topic.levelTitle = level.title;
+      currentTopics.push(topic);
+    });
+  });
+
+  sidebarTitle.textContent = `${doc.label} Topics`;
+  heroTitle.textContent = `${doc.label} Master Guide`;
+  heroText.textContent = doc.description;
+  searchBox.placeholder = `Search ${doc.label}...`;
+  searchBox.value = "";
+  searchResults.style.display = "none";
+
+  renderSidebar(doc);
+  wireSidebarGroups();
+  selectTopic(currentTopics[0]?.id);
+}
+
+// ============================================================================
+// EVENT LISTENERS
+// ============================================================================
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("hide");
@@ -2735,20 +1127,26 @@ tabs.forEach(tab => {
   tab.addEventListener("click", () => {
     tabs.forEach(item => item.classList.remove("active"));
     tab.classList.add("active");
-    languageTabs.prepend(tab);
     renderTab(tab.dataset.tab);
   });
 });
 
-searchBox.addEventListener("input", searchTopics);
+searchBox.addEventListener("input", (e) => {
+  performSearch(e.target.value);
+});
 
 document.addEventListener("click", event => {
-  if(!event.target.closest(".search-area")){
+  if (!event.target.closest(".search-area")) {
     searchResults.style.display = "none";
   }
 });
 
-renderTab(activeTab);
+// ============================================================================
+// STARTUP
+// ============================================================================
+
+buildSearchIndex();
+renderTab("linux");
 </script>
 </body>
 </html>
